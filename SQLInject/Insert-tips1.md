@@ -34,7 +34,7 @@ select group_concat(table_name) from information_schema.tables where table_schem
 
 ![1558442033923](img/Insert-tips5.png)
 
-这时候可以用截取substr函数来获取结果，和进制转换CONV来实现，
+这时候可以用截取substr函数来获取结果，和进制转换CONV来实现，个人猜测是没法显示字母，只能显示数字所以要转成10进制，上面数据库ctf没有字母是例外
 
 CONV把16进制转为10进制可以使结果更长，但是超过12位会回显科学计数法，所以要用substr来截断，mid也行
 
