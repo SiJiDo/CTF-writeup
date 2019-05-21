@@ -18,7 +18,7 @@
 'test1'+(select hex(database()))
 ```
 
-![1558441115745](img/Insert-tip3.png)
+![1558441115745](img/Insert-tips3.png)
 
 再进行16进制解码就能获取结果，如果太长可以使用substr来截取，这里就不再赘述
 
