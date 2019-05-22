@@ -45,7 +45,7 @@ The bug is due to array handling in bash, which is indicated by the parenthesis.
 再附上一个shell的rec脚本
 
 ```
-$output=$($URL_PARAMS['cmd']); echo $output;
+$output=$(${URL_PARAMS['cmd']}); echo $output;
 ```
 
 
