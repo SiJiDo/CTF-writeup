@@ -1,6 +1,6 @@
 在sql注入中，如果用length返回的最大长度是1024，即如下情况
 
-![1558677336349](img\select order-tips1.png)
+![1558440861774](img/select order-tips1.png)
 
 我在无法获取当前数据库名的情况下，最先尝试直接通过爆破table_name字段获取有用信息，但是超过1024后脚本就抛出异常了
 
@@ -10,7 +10,7 @@
 select group_concat(table_name order by table_name) from information_schema.tables
 ```
 
-![1558677586575](img\select order-tips2.png)
+![1558677586575](img/select order-tips2.png)
 
 在mysql中无法用`select database()`返回数据库名，可能是在后端代码对数据库操作时并未指定操作数据库对象，那么在一般调用是就会使用这样的格式
 
